@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>จองรถส่วนกลา) กสฟ)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>ระบบจองรถยนต์ กฟภ.(CarPool) ของ กสฟ.(น2)</h1>
+
+  <div class="legend">
+    <div class="legend-item"><div class="color-box car1"></div>1270 กทม.</div>
+    <div class="legend-item"><div class="color-box car2"></div>1370 กทม.</div>
+    <div class="legend-item"><div class="color-box car3"></div>8046 กทม.</div>
+  </div>
+
+  <section class="form-section">
+    <h2 id="formTitle">จองรถ</h2>
+    <form id="bookingForm">
+      <input type="hidden" id="editKey" value="">
+
+      <label>วันที่เริ่ม</label>
+      <input type="date" id="startDate" required>
+
+      <label>วันที่สิ้นสุด</label>
+      <input type="date" id="endDate" required>
+
+      <label>รถที่ต้องการ</label>
+      <select id="car" required>
+        <option value="">-- เลือกรถ --</option>
+        <option value="car1">1270 กทม.</option>
+        <option value="car2">1370 กทม.</option>
+        <option value="car3">8046 กทม.</option>
+      </select>
+
+      <label>ผู้จอง / หน่วยงาน</label>
+      <input type="text" id="booker" placeholder="ชื่อ-สกุล หรือหน่วยงาน" required>
+
+      <div class="form-buttons">
+        <button type="submit" id="submitBtn">ส่งคำขอจอง</button>
+        <button type="button" id="cancelBtn" style="display:none;">ยกเลิก</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="bookings-section">
+    <h2>รายการจองทั้งหมด</h2>
+    <div id="bookingList"></div>
+  </section>
+</div>
+
+<!-- Modal อนุมัติ -->
+<div id="approveModal" class="modal" style="display:none">
+  <div class="modal-content">
+    <h3>อนุมัติการจอง</h3>
+    <p id="approveInfo"></p>
+
+    <div class="input-group">
+      <label for="adminUser">รหัสพนักงาน</label>
+      <input type="text" id="adminUser" placeholder="เช่น 472930" autocomplete="off">
+    </div>
+
+    <div class="input-group">
+      <label for="adminPass">วันเดือนปีเกิด (DDMMYYYY)</label>
+      <input type="password" id="adminPass" placeholder="เช่น 28052517" autocomplete="off">
+    </div>
+
+    <div class="form-buttons">
+      <button id="confirmApprove">ยืนยันอนุมัติ</button>
+      <button id="cancelApprove">ยกเลิก</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
