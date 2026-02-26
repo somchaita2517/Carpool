@@ -1,0 +1,138 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: system-ui, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.container { max-width: 960px; margin: 0 auto; }
+
+h1 { text-align: center; color: #1a3c6d; margin-bottom: 24px; }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin: 20px 0 32px;
+}
+
+.legend-item { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+.car1 { background: #e8f5e9; }
+.car2 { background: #ffebee; }
+.car3 { background: #fff3e0; }
+
+.form-section, .bookings-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+label { display: block; margin: 16px 0 6px; font-weight: 500; }
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+#submitBtn { background: #1a3c6d; color: white; }
+#submitBtn:hover { background: #0f2550; }
+#cancelBtn { background: #757575; color: white; }
+
+.booking-item {
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border-left: 5px solid;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.booking-item.car1 { border-left-color: #2e7d32; background: #e8f5e9; }
+.booking-item.car2 { border-left-color: #c62828; background: #ffebee; }
+.booking-item.car3 { border-left-color: #f57c00; background: #fff3e0; }
+
+.booking-actions button {
+  padding: 6px 12px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.btn-edit    { background: #1976d2; }
+.btn-delete  { background: #d32f2f; }
+.btn-approve { background: #388e3c; }
+.btn-cancel  { background: #c62828; } /* สีแดงสำหรับยกเลิก */
+
+.status-wait    { color: #f57c00; font-weight: bold; }
+.status-approved { color: #2e7d32; font-weight: bold; }
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.input-group { margin-bottom: 20px; }
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
